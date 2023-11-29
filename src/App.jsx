@@ -1,3 +1,4 @@
+import FormPage from "./companents/form";
 import Header from "./companents/header";
 import Intro from "./companents/intro";
 import Test from "./companents/proba";
@@ -32,6 +33,8 @@ const App = () => {
     <Header />
     <Intro />
     <Test value ={data} />
+
+    <FormPage/>
     
     {/* <p style={{background:"red"}}>salom vaqt : {farmatDate(today)}</p> */}
   </div>
