@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import FormPage from "./companents/form";
 import Header from "./companents/header";
 import Intro from "./companents/intro";
@@ -33,14 +34,12 @@ const App = () => {
     return (
         <div>
             <Header />
-            <Intro />
-            <Test value={data} />
 
-            <FormPage />
-
-        <LearnRef />
-        
-        <LearnUseEffect/>
+            <Routes>
+                <Route path='/' element={<Intro />} />
+                <Route path='/service' element={<Test value={data} />} />
+                <Route path='/team' element={<FormPage />} />
+            </Routes>
 
             {/* <p style={{background:"red"}}>salom vaqt : {farmatDate(today)}</p> */}
         </div>
