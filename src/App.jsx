@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import FormPage from "./companents/form";
 import Header from "./companents/header";
 import Intro from "./companents/intro";
+import LearnRef from "./companents/learnRef";
+import LearnUseEffect from "./companents/learnUseEffect";
 import Test from "./companents/proba";
 
 const App = () => {
