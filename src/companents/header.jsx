@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import LogoImg from "../image/pixer-logo.png";
+import { menuData } from "../utils/data";
 
 const Header = () => {
     const handlyFunc = () => {
@@ -13,36 +15,13 @@ const Header = () => {
                 </div>
                 <div className='header__all'>
                     <ul className='header__list'>
-                        <li>
-                            <a href='#' className='header__link'>
-                                Bosh sahifa
-                            </a>
-                        </li>
-                        <li>
-                            <a href='#' className='header__link'>
-                                Xizmatlar
-                            </a>
-                        </li>
-                        <li>
-                            <a href='#' className='header__link'>
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href='#' className='header__link'>
-                                Jamoa
-                            </a>
-                        </li>
-                        <li>
-                            <a href='#' className='header__link'>
-                                Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href='#' className='header__link'>
-                                kantaktlar
-                            </a>
-                        </li>
+                        {
+                            menuData.map(item => (
+                                <li key={item.id}>
+                                    <Link to={item.path}>{item.title}</Link>
+                                </li>
+                            ))
+                       }
                     </ul>
                     <button className='btn' onClick={handlyFunc}>+998 94 315 56 66</button>
                 </div>
