@@ -5,6 +5,8 @@ import Intro from "./companents/intro";
 import LearnRef from "./companents/learnRef";
 import LearnUseEffect from "./companents/learnUseEffect";
 import Test from "./companents/proba";
+import WorldNews from "./companents/world-news";
+import Maxal from "./companents/maxal";
 
 const App = () => {
     const data = [
@@ -39,6 +41,8 @@ const App = () => {
                 <Route path='/' element={<Intro />} />
                 <Route path='/service' element={<Test value={data} />} />
                 <Route path='/team' element={<FormPage />} />
+                <Route path='/jahon' element={<WorldNews />} />
+                <Route path='/maxal' element={<Maxal />} />
             </Routes>
 
             {/* <p style={{background:"red"}}>salom vaqt : {farmatDate(today)}</p> */}
